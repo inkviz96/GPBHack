@@ -1,0 +1,72 @@
+body{
+	background-color: #FFFFFF;
+	font-size: 20px;
+}
+
+.menu{
+    margin: 10px;
+	background-color: #007AC2;
+	font-size: 18px;
+	color: #FFFFFF;
+	border: 1px solid;
+	border-radius: 12px;
+	display: block;
+}
+
+.dia{
+    margin: 15px;
+    height: 35px;
+}
+
+.main{
+    margin: 10px;
+	text-align: center;
+	background-color: #007AC2;
+	color: #FFFFFF;
+	border: 1px solid;
+	border-radius: 13px;
+	margin: 0 auto;
+	font-size: 24px;
+    width: 1250px;
+    display: block;
+}
+
+.sub{
+    margin: 10px;
+    border: 1px solid;
+	text-align: center;
+	font-size: 18px;
+	width: 280px;
+	height: 130px;
+	display: block;
+}
+
+.processes{
+    margin: 15px;
+    padding: 25px;
+	font-size: 18px;
+	border: 1px solid;
+	border-solid: 10px;
+	width: 550px;
+	display: block;
+}
+
+.input{
+    padding: 10px;
+    float: left;
+    margin: 10px;
+    border: 1px solid;
+	font-size: 14px;
+	width: 250px;
+	display: inline;
+}
+
+.output{
+    padding: 10px;
+    float: left;
+    margin: 10px;
+    border: 1px solid;
+	font-size: 14px;
+	width: 250px;
+	display: inline;
+}

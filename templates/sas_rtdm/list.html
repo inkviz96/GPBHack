@@ -1,0 +1,60 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'style.css'%}" type="text/css">
+    <title>Связи</title>
+</head>
+<body>
+<div class="menu">
+    <h1>Мертвые процессы</h1>
+<br><h2>{% for d in dead %}id: {{d.pid}}<br>Название: {{d.name}}<br>Таблица бд: {{d.table_name}}<br>{% endfor %}</h2>
+<br><h2>Input: {{input}}</h2>
+<br><h2>Output: {{output}}</h2></div>
+{% for diagram in diagrams %}
+<div class="main">
+    <div class="dia">Название диаграммы: {{diagram.name}}</div>
+    Поддиаграммы:
+    {% for subdiagram in subdiagrams %}
+    <div class="sub">
+
+        id: {{subdiagram.did}}
+        <br>Название: {{subdiagram.name}}
+        Ссылка на объект: {{subdiagram.source}}
+    </div>
+    {% endfor %}
+    Процессы:
+    {% for proces in processes %}
+    <div class="processes">
+        id: {{proces.pid}}
+        <br>Название: {{proces.name}}
+        <br>Ссылка на объект: {{proces.source}}
+        <br>Таблица бд: {{proces.table_name}}
+        <br>_____________________
+        <br>Данные:
+        {% for input in inputs %}
+        <div class="input">
+            <div>
+            Название:{{input.name}}
+            <br>Тип: {{input.type}}
+            <br>Имя SAS: {{input.physical_name}}
+            </div>
+        </div>
+        {% endfor %}
+        {% for output in outputs %}
+        <div class="output">
+            <div>
+            Название:{{output.name}}
+            <br>Тип: {{output.type}}
+            <br>Имя SAS: {{output.physical_name}}
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    {% endfor %}
+</div>
+{% endfor %}
+
+</body>
+</html>
